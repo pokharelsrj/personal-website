@@ -1,11 +1,9 @@
-import "./App.css";
+import { hot } from "react-hot-loader/root";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
-  );
-}
+export const App: React.FC = () => (
+  <>
+    <h1>Hello</h1>
+  </>
+);
 
-export default App;
+export default hot(App);
