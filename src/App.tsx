@@ -1,5 +1,6 @@
 import Home from "./pages/Home";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import { Shadows } from "@material-ui/core/styles/shadows";
 
 const theme = createMuiTheme({
   palette: {
@@ -10,6 +11,7 @@ const theme = createMuiTheme({
       main: "#C25B56",
     },
   },
+  shadows: Array(25).fill("none") as Shadows,
 });
 
 export const App: React.FC = () => (
