@@ -6,8 +6,7 @@ import logo from "../../assets/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: `${theme.palette.background.paper}`,
-    borderBottom: `1px solid ${theme.palette.background.paper}`,
+    backgroundColor: `${theme.palette.background.default}`,
   },
   link: {
     margin: theme.spacing(1, 1.5),
@@ -16,9 +15,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     flexWrap: "wrap",
   },
-  socialHandles: {},
-  logo: {},
-  nav: {},
+  socialHandles: {
+    flex: 1,
+  },
+  logo: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  nav: {
+    flex: 1,
+    justifyContent: "flex-end",
+  },
 }));
 
 export const Header: React.FC = () => {
@@ -60,6 +67,14 @@ export const Header: React.FC = () => {
               className={classes.link}
             >
               Support
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="#"
+              className={classes.link}
+            >
+              About
             </Link>
           </Box>
         </Toolbar>
