@@ -7,6 +7,7 @@ import logo from "../../assets/logo.png";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: `${theme.palette.background.default}`,
+    marginTop: theme.spacing(4),
   },
   link: {
     margin: theme.spacing(1, 1.5),
@@ -35,7 +36,10 @@ export const Header: React.FC = () => {
       <CssBaseline />
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Box display="flex" className={classes.socialHandles}>
+          <Box
+            display={{ xs: "none", sm: "flex" }}
+            className={classes.socialHandles}
+          >
             <SocialHandles />
           </Box>
 
@@ -50,31 +54,31 @@ export const Header: React.FC = () => {
               href="#"
               className={classes.link}
             >
-              Features
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Enterprise
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Support
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
               About
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="#"
+              className={classes.link}
+            >
+              Technologies
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="#"
+              className={classes.link}
+            >
+              Hobbies
+            </Link>
+            <Link
+              variant="button"
+              color="textPrimary"
+              href="#"
+              className={classes.link}
+            >
+              Blog
             </Link>
           </Box>
         </Toolbar>
