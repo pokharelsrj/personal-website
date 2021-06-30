@@ -9,6 +9,7 @@ import EmailIcon from "@material-ui/icons/Email";
 const useStyles = makeStyles((theme) => ({
   icons: {
     margin: theme.spacing(1, 0.5),
+    color: `black`,
   },
 }));
 
