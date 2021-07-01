@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  CssBaseline,
-  Typography,
-  Container,
-  Grid,
-  Button,
-} from "@material-ui/core";
+import { Typography, Container, Grid, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import img1 from "../../assets/img1.jpeg";
 
@@ -24,7 +18,6 @@ export const Introduction: React.FC = () => {
   const classes = useStyles();
   return (
     <>
-      <CssBaseline />
       <Container maxWidth="sm" className={classes.intro}>
         <Typography
           component="h1"

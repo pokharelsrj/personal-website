@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, CssBaseline, Link, Box } from "@material-ui/core";
+import { AppBar, Toolbar, Link, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
 import logo from "../../assets/logo.png";
@@ -33,7 +33,6 @@ export const Header: React.FC = () => {
   const classes = useStyles();
   return (
     <>
-      <CssBaseline />
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Box
