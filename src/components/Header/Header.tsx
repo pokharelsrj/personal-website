@@ -1,8 +1,16 @@
 import React from "react";
-import { AppBar, Toolbar, Link, Box } from "@material-ui/core";
+import {
+  AppBar,
+  Toolbar,
+  Link,
+  Box,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
 import logo from "../../assets/logo.png";
+import NavDrawer from "../NavDrawer";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -31,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
 
 export const Header: React.FC = () => {
   const classes = useStyles();
+  const theme = useTheme();
+
+  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <AppBar position="static" className={classes.appBar}>
@@ -41,45 +53,49 @@ export const Header: React.FC = () => {
           >
             <SocialHandles />
           </Box>
-
           <Box display="flex" className={classes.logo}>
             <img src={logo} alt="logo" height="60px" />
           </Box>
-
-          <Box display="flex" className={classes.nav}>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              About
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Technologies
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Hobbies
-            </Link>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="#"
-              className={classes.link}
-            >
-              Blog
-            </Link>
-          </Box>
+          {isMatch ? (
+            <NavDrawer />
+          ) : (
+            <>
+              <Box display="flex" className={classes.nav}>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  About
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  Technologies
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  Hobbies
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                >
+                  Blog
+                </Link>
+              </Box>
+            </>
+          )}
         </Toolbar>
       </AppBar>
     </>
