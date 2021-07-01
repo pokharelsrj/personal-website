@@ -9,7 +9,15 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu } from "@material-ui/icons";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  list: {
+    paddingRight: theme.spacing(10, 5),
+  },
+  drawerPaper: {
+    width: 200,
+    opacity: 0.95,
+  },
+}));
 
 export const NavDrawer: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -20,10 +28,22 @@ export const NavDrawer: React.FC = () => {
         anchor="right"
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
       >
-        <List>
+        <List className={classes.list}>
           <ListItem>
-            <ListItemText>About me</ListItemText>
+            <ListItemText>About</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>Technologies</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>Hobbies</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>Blog</ListItemText>
           </ListItem>
         </List>
       </Drawer>
