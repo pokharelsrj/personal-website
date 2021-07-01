@@ -5,16 +5,20 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
+import { Theme } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles<Theme, Props>((theme) => ({
   icons: {
     margin: theme.spacing(1, 0.5),
-    color: `black`,
+    color: ({ color }) => color,
   },
 }));
 
-export const SocialHandles: React.FC = () => {
-  const classes = useStyles();
+interface Props {
+  color: any;
+}
+export const SocialHandles: React.FC<Props> = (props) => {
+  const classes = useStyles(props);
   return (
     <React.Fragment>
       <FacebookIcon className={classes.icons} />
