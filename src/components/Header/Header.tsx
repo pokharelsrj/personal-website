@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <Box
-            display={{ xs: "none", sm: "flex" }}
+            display={{ xs: "none", md: "flex" }}
             className={classes.socialHandles}
           >
             <SocialHandles />
