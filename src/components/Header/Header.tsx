@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
             display={{ xs: "none", md: "flex" }}
             className={classes.socialHandles}
           >
-            <SocialHandles />
+            <SocialHandles color="black" />
           </Box>
           <Box display="flex" className={classes.logo}>
             <img src={logo} alt="logo" height="60px" />
