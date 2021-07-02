@@ -3,3 +3,7 @@
 ## Heroku Staging details -
 
 - Url: https://srijan-pokharel-website.herokuapp.com/
+
+## Heroku Production details -
+
+- Url: https://pokharelsrj.herokuapp.com/
