@@ -1,0 +1,11 @@
+{
+  "root": "dist/",
+  "routes": {
+    "/**": "index.html"
+  },
+  "https_only": true,
+  "logging": {
+    "access": true,
+    "error": "info"
+  }
+}
