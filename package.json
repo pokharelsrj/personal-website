@@ -20,8 +20,6 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dist": "NODE_ENV=production webpack --progress"
   },
