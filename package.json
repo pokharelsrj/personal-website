@@ -19,10 +19,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "webpack": "webpack",
     "start": "webpack serve",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "heroku-postbuild": "yarn dist",
     "dist": "NODE_ENV=production webpack --progress"
   },
   "eslintConfig": {
