@@ -23,7 +23,8 @@
     "start": "webpack serve",
     "eject": "react-scripts eject",
     "heroku-postbuild": "yarn dist",
-    "dist": "NODE_ENV=production webpack --progress"
+    "dist": "NODE_ENV=production webpack --progress",
+    "clean": "rimraf dist coverage"
   },
   "eslintConfig": {
     "extends": [
