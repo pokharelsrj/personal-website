@@ -2,15 +2,16 @@ import React from "react";
 import {
   AppBar,
   Toolbar,
-  Link,
   Box,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
 import logo from "../../assets/logo.png";
 import NavDrawer from "../NavDrawer";
+import { Link as NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -61,38 +62,20 @@ export const Header: React.FC = () => {
           ) : (
             <>
               <Box display="flex" className={classes.nav}>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                >
-                  About
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                >
-                  Technologies
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                >
-                  Hobbies
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                >
-                  Blog
-                </Link>
+                <NavLink to={{ pathname: "/blogs" }}>
+                  <Button className={classes.link}>About</Button>
+                </NavLink>
+
+                <NavLink to={{ pathname: "/blogs" }}>
+                  <Button className={classes.link}>Technologies</Button>
+                </NavLink>
+
+                <NavLink to={{ pathname: "/blogs" }}>
+                  <Button className={classes.link}>Hobbies</Button>
+                </NavLink>
+                <NavLink to={{ pathname: "/blogs" }}>
+                  <Button className={classes.link}>Blogs</Button>
+                </NavLink>
               </Box>
             </>
           )}
