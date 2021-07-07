@@ -1,66 +1,27 @@
 {
   "name": "personal-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pokharelsrj/personal-website.git",
+  "author": "pokharelsrj <pokharelsrj@gmail.com>",
+  "license": "MIT",
+  "engine": {
+    "node": "14.x",
+    "npm": "7.x"
   },
   "scripts": {
-    "webpack": "webpack",
-    "start": "webpack serve",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "yarn dist",
-    "dist": "NODE_ENV=production webpack --progress",
-    "clean": "rimraf dist coverage"
+    "start": "node index",
+    "server": "nodemon index",
+    "build": "cd client && yarn dist",
+    "install-client": "cd client && yarn",
+    "heroku-postbuild": "yarn install-client && yarn build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.14.5",
-    "@types/react-router-dom": "^5.1.7",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.6",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "path": "^0.12.7",
-    "style-loader": "^3.0.0",
-    "ts-loader": "^9.2.3",
-    "webpack": "^5.42.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.9"
   }
 }
