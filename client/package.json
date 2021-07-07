@@ -21,12 +21,10 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "webpack": "webpack",
-    "start": "webpack serve",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "yarn dist",
-    "dist": "NODE_ENV=production webpack --progress",
-    "clean": "rimraf dist coverage"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -45,22 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.14.5",
-    "@types/react-router-dom": "^5.1.7",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.6",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.2",
-    "path": "^0.12.7",
-    "style-loader": "^3.0.0",
-    "ts-loader": "^9.2.3",
-    "webpack": "^5.42.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
   }
 }
