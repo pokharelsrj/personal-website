@@ -1,4 +1,3 @@
-import Home from "./pages/Home";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 import { Shadows } from "@material-ui/core/styles/shadows";
 import { makeStyles } from "@material-ui/core/styles";
