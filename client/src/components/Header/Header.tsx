@@ -5,13 +5,13 @@ import {
   Box,
   useTheme,
   useMediaQuery,
-  Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
 import logo from "../../assets/logo.png";
 import NavDrawer from "../NavDrawer";
-import { Link as NavLink } from "react-router-dom";
+import { Link } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 export const Header: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
+  const history = useHistory();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -62,20 +63,50 @@ export const Header: React.FC = () => {
           ) : (
             <>
               <Box display="flex" className={classes.nav}>
-                <NavLink to={{ pathname: "/blogs" }}>
-                  <Button className={classes.link}>About</Button>
-                </NavLink>
-
-                <NavLink to={{ pathname: "/blogs" }}>
-                  <Button className={classes.link}>Technologies</Button>
-                </NavLink>
-
-                <NavLink to={{ pathname: "/blogs" }}>
-                  <Button className={classes.link}>Hobbies</Button>
-                </NavLink>
-                <NavLink to={{ pathname: "/blogs" }}>
-                  <Button className={classes.link}>Blogs</Button>
-                </NavLink>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  About
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Technologies
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                  onClick={() => {
+                    history.push("/");
+                  }}
+                >
+                  Hobbies
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="#"
+                  className={classes.link}
+                  onClick={() => {
+                    history.push("/blogs");
+                  }}
+                >
+                  Blog
+                </Link>
               </Box>
             </>
           )}
