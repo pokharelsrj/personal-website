@@ -31,11 +31,16 @@ export const Introduction: React.FC = () => {
       </Container>
       <div className={classes.aboutMeDiv}>
         <Container maxWidth="md" className={classes.aboutMe}>
-          <Grid container spacing={5} alignItems="center" justify="center">
+          <Grid
+            container
+            spacing={5}
+            alignItems="center"
+            justifyContent="center"
+          >
             <Grid item lg={7}>
               <Grid
                 container
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 spacing={8}
                 direction="column"
