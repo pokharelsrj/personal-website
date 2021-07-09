@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "../../components/Header";
+import { CssBaseline } from "@material-ui/core";
 
 export const Blogs: React.FC = () => {
   return (
     <>
-      <h1>Blogs</h1>
+      <CssBaseline />
+      <Header />
     </>
   );
 };
