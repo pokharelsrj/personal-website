@@ -6,6 +6,7 @@ import {
   ListItem,
   IconButton,
   ListItemIcon,
+  Divider,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu } from "@material-ui/icons";
@@ -15,6 +16,7 @@ import WebIcon from "@material-ui/icons/Web";
 import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
 import CreateIcon from "@material-ui/icons/Create";
 import { useHistory } from "react-router-dom";
+import SocialHandles from "../SocialHandles";
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: {
@@ -26,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-start",
     padding: "0 8px",
   },
-  drawer: {
-    paddingTop: "50px",
+  socialHandles: {
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 
@@ -45,12 +48,18 @@ export const NavDrawer: React.FC = () => {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawer}>
+        <div className={classes.socialHandles}>
+          <SocialHandles color="black" />
+        </div>
+        <Divider />
+
+        <div>
           <div className={classes.toolbarIcon}>
             <IconButton onClick={() => setOpenDrawer(false)}>
               <ChevronRightIcon />
             </IconButton>
           </div>
+          <Divider />
           <List>
             <ListItem
               button
