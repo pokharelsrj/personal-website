@@ -5,13 +5,13 @@ import {
   Box,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
 import logo from "../../assets/logo.png";
 import NavDrawer from "../NavDrawer";
-import { Link } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { Link as NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
+    textDecoration: "none",
+    "&:hover": {
+      backgroundColor: "#fafafa",
+    },
   },
   toolbar: {
     justifyContent: "space-between",
@@ -41,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 export const Header: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const history = useHistory();
 
   const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -63,50 +66,32 @@ export const Header: React.FC = () => {
           ) : (
             <>
               <Box display="flex" className={classes.nav}>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                  onClick={() => {
-                    history.push("/");
-                  }}
+                <NavLink
+                  to={{ pathname: "/" }}
+                  style={{ textDecoration: "none" }}
                 >
-                  About
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                  onClick={() => {
-                    history.push("/");
-                  }}
+                  <Button className={classes.link}>About</Button>
+                </NavLink>
+
+                <NavLink
+                  to={{ pathname: "/blogs" }}
+                  style={{ textDecoration: "none" }}
                 >
-                  Technologies
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                  onClick={() => {
-                    history.push("/");
-                  }}
+                  <Button className={classes.link}>Technologies</Button>
+                </NavLink>
+
+                <NavLink
+                  to={{ pathname: "/blogs" }}
+                  style={{ textDecoration: "none" }}
                 >
-                  Hobbies
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="#"
-                  className={classes.link}
-                  onClick={() => {
-                    history.push("/blogs");
-                  }}
+                  <Button className={classes.link}>Hobbies</Button>
+                </NavLink>
+                <NavLink
+                  to={{ pathname: "/blogs" }}
+                  style={{ textDecoration: "none" }}
                 >
-                  Blog
-                </Link>
+                  <Button className={classes.link}>Blogs</Button>
+                </NavLink>
               </Box>
             </>
           )}
