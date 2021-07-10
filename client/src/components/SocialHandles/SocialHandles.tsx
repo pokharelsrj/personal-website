@@ -6,6 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import { Theme } from "@material-ui/core";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles<Theme, Props>((theme) => ({
   icons: {
@@ -21,11 +22,24 @@ export const SocialHandles: React.FC<Props> = (props) => {
   const classes = useStyles(props);
   return (
     <React.Fragment>
-      <FacebookIcon className={classes.icons} />
-      <InstagramIcon className={classes.icons} />
-      <TwitterIcon className={classes.icons} />
-      <LinkedInIcon className={classes.icons} />
-      <EmailIcon className={classes.icons} />
+      <Link href="https://www.facebook.com/pokharelsrj/" target="_blank">
+        <FacebookIcon className={classes.icons} />
+      </Link>
+      <Link href="https://www.instagram.com/srijan_pokharel/" target="_blank">
+        <InstagramIcon className={classes.icons} />
+      </Link>
+
+      <Link href="https://twitter.com/pokharelsrj" target="_blank">
+        <TwitterIcon className={classes.icons} />
+      </Link>
+
+      <Link href="https://www.linkedin.com/in/pokharelsrj/" target="_blank">
+        <LinkedInIcon className={classes.icons} />
+      </Link>
+
+      <Link href="https://www.facebook.com/pokharelsrj/" target="_blank">
+        <EmailIcon className={classes.icons} />
+      </Link>
     </React.Fragment>
   );
 };
