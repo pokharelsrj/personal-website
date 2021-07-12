@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className={classes.footer}>
       <Divider />
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid container alignItems="center" direction="column">
           <Grid item>
             <SocialHandles color="rgba(0, 0, 0, 0.54)" />
