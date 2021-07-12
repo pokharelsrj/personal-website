@@ -6,6 +6,7 @@ import {
   useTheme,
   useMediaQuery,
   Button,
+  Container,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SocialHandles from "../SocialHandles";
@@ -50,53 +51,55 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <AppBar position="static" className={classes.appBar}>
-        <Toolbar className={classes.toolbar}>
-          <Box
-            display={{ xs: "none", md: "flex" }}
-            className={classes.socialHandles}
-          >
-            <SocialHandles color="black" />
-          </Box>
-          <Box display="flex" className={classes.logo}>
-            <img src={logo} alt="logo" height="60px" />
-          </Box>
-          {isMatch ? (
-            <NavDrawer />
-          ) : (
-            <>
-              <Box display="flex" className={classes.nav}>
-                <NavLink
-                  to={{ pathname: "/" }}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Button className={classes.link}>About</Button>
-                </NavLink>
+      <Container maxWidth="md">
+        <AppBar position="static" className={classes.appBar}>
+          <Toolbar className={classes.toolbar}>
+            <Box
+              display={{ xs: "none", md: "flex" }}
+              className={classes.socialHandles}
+            >
+              <SocialHandles color="black" />
+            </Box>
+            <Box display={{ xs: "flex", md: "none" }} className={classes.logo}>
+              <img src={logo} alt="logo" height="60px" />
+            </Box>
+            {isMatch ? (
+              <NavDrawer />
+            ) : (
+              <>
+                <Box display="flex" className={classes.nav}>
+                  <NavLink
+                    to={{ pathname: "/" }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button className={classes.link}>About</Button>
+                  </NavLink>
 
-                <NavLink
-                  to={{ pathname: "/blogs" }}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Button className={classes.link}>Technologies</Button>
-                </NavLink>
+                  <NavLink
+                    to={{ pathname: "/blogs" }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button className={classes.link}>Technologies</Button>
+                  </NavLink>
 
-                <NavLink
-                  to={{ pathname: "/blogs" }}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Button className={classes.link}>Hobbies</Button>
-                </NavLink>
-                <NavLink
-                  to={{ pathname: "/blogs" }}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Button className={classes.link}>Blogs</Button>
-                </NavLink>
-              </Box>
-            </>
-          )}
-        </Toolbar>
-      </AppBar>
+                  <NavLink
+                    to={{ pathname: "/blogs" }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button className={classes.link}>Hobbies</Button>
+                  </NavLink>
+                  <NavLink
+                    to={{ pathname: "/blogs" }}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button className={classes.link}>Blogs</Button>
+                  </NavLink>
+                </Box>
+              </>
+            )}
+          </Toolbar>
+        </AppBar>
+      </Container>
     </>
   );
 };
