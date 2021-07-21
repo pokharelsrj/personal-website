@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.default,
     marginTop: theme.spacing(10),
-    padding: theme.spacing(6, 0),
+    padding: theme.spacing(2, 0),
   },
   socialHandle: {
     flex: 1,
