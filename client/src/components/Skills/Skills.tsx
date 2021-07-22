@@ -16,11 +16,43 @@ import { SkillsInterface } from "../SkillsDescription/types";
 const skillsData: Array<SkillsInterface> = [
   {
     title: "Html",
-    description: "Html is great",
+    description:
+      "HTML is the standard markup language for documents designed to be displayed in a web browser.",
   },
   {
-    title: "Css",
-    description: "CSSS",
+    title: "CSS",
+    description:
+      "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
+  },
+  {
+    title: "JS",
+    description:
+      "JS is a programming language that conforms to the ECMAScript specification.",
+  },
+  {
+    title: "TS",
+    description:
+      "TS is a strict syntactical superset of JavaScript and adds optional static typing to the language.",
+  },
+  {
+    title: "Kotlin",
+    description:
+      "Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference.",
+  },
+  {
+    title: "Nodejs",
+    description:
+      "Node.js is a back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+  },
+  {
+    title: "Micronaut",
+    description:
+      "Micronaut is a modern, JVM-based, Full-Stack framework or building modular easily testable microservice and serverless application.",
+  },
+  {
+    title: "PostgreSQl",
+    description:
+      "PostgreSQL is a free and open-source relational database management system emphasizing extensibility and SQL compliance.",
   },
 ];
 
@@ -31,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "15%",
   },
   skillsDescription: {
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
+    // minHeight: "200px",
   },
 }));
 export const Skills: React.FC = () => {
@@ -85,8 +118,22 @@ export const Skills: React.FC = () => {
                       setSkillsState(1);
                     }}
                   />
-                  <img src={js} alt="js" className={classes.images} />
-                  <img src={ts} alt="ts" className={classes.images} />
+                  <img
+                    src={js}
+                    alt="js"
+                    className={classes.images}
+                    onClick={() => {
+                      setSkillsState(2);
+                    }}
+                  />
+                  <img
+                    src={ts}
+                    alt="ts"
+                    className={classes.images}
+                    onClick={() => {
+                      setSkillsState(3);
+                    }}
+                  />
                 </Grid>
                 <Grid
                   container
@@ -94,17 +141,37 @@ export const Skills: React.FC = () => {
                   justifyContent="center"
                   alignItems="center"
                 >
-                  <img src={kotlin} alt="kotlin" className={classes.images} />
-                  <img src={node} alt="node" className={classes.images} />
+                  <img
+                    src={kotlin}
+                    alt="kotlin"
+                    className={classes.images}
+                    onClick={() => {
+                      setSkillsState(4);
+                    }}
+                  />
+                  <img
+                    src={node}
+                    alt="node"
+                    className={classes.images}
+                    onClick={() => {
+                      setSkillsState(5);
+                    }}
+                  />
                   <img
                     src={micronaut}
                     alt="micronaut"
                     className={classes.images}
+                    onClick={() => {
+                      setSkillsState(6);
+                    }}
                   />
                   <img
                     src={postgres}
                     alt="postgres"
                     className={classes.images}
+                    onClick={() => {
+                      setSkillsState(7);
+                    }}
                   />
                 </Grid>
               </Grid>
