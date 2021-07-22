@@ -8,7 +8,13 @@ export const SkillsDescription: React.FC<SkillsInterface> = ({
 }) => {
   return (
     <>
-      <Typography variant="h3" align="center" color="textPrimary" component="p">
+      <Typography
+        variant="h3"
+        align="center"
+        color="textPrimary"
+        component="p"
+        gutterBottom
+      >
         {title}
       </Typography>
       <Typography
