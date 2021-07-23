@@ -66,148 +66,153 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "#fff",
     // minHeight: "200px",
   },
+  container: {
+    marginBottom: theme.spacing(8),
+  },
 }));
 export const Skills: React.FC = () => {
   const classes = useStyles();
   const [skillsState, setSkillsState] = useState(0);
   return (
     <>
-      <Container maxWidth="md">
-        <Grid container spacing={8}>
-          <Grid
-            container
-            item
-            spacing={5}
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item lg={12}>
-              <Typography
-                variant="h5"
-                align="center"
-                color="textSecondary"
-                component="p"
-              >
-                Driven by my eagerness, I&apos;ve been honing my technical
-                skills for a long time.
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid container item justifyContent="center" alignItems="center">
-            <Grid item lg={7}>
-              <Grid container spacing={5} direction="column">
-                <Grid
-                  container
-                  item
-                  justifyContent="center"
-                  alignItems="center"
+      <div className={classes.container}>
+        <Container maxWidth="md">
+          <Grid container spacing={8}>
+            <Grid
+              container
+              item
+              spacing={5}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item lg={12}>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  color="textSecondary"
+                  component="p"
                 >
-                  <img
-                    src={html}
-                    alt="html"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(0);
-                    }}
-                  />
-                  <img
-                    src={css}
-                    alt="css"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(1);
-                    }}
-                  />
-                  <img
-                    src={js}
-                    alt="js"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(2);
-                    }}
-                  />
-                  <img
-                    src={ts}
-                    alt="ts"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(3);
-                    }}
-                  />
-                </Grid>
-                <Grid
-                  container
-                  item
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <img
-                    src={kotlin}
-                    alt="kotlin"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(4);
-                    }}
-                  />
-                  <img
-                    src={node}
-                    alt="node"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(5);
-                    }}
-                  />
-                  <img
-                    src={micronaut}
-                    alt="micronaut"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(6);
-                    }}
-                  />
-                  <img
-                    src={postgres}
-                    alt="postgres"
-                    className={classes.images}
-                    onClick={() => {
-                      setSkillsState(7);
-                    }}
-                  />
-                </Grid>
+                  Driven by my eagerness, I&apos;ve been honing my technical
+                  skills for a long time.
+                </Typography>
               </Grid>
             </Grid>
-            <Grid item lg={5}>
-              <Box display={{ xs: "none", lg: "inline" }}>
-                <Grid
-                  container
-                  alignItems="center"
-                  justifyContent="center"
-                  direction="column"
-                  className={classes.skillsDescription}
-                >
-                  <Grid item lg={12}>
-                    <SkillsDescription
-                      title={skillsData[skillsState].title}
-                      description={skillsData[skillsState].description}
+            <Grid container item justifyContent="center" alignItems="center">
+              <Grid item lg={7}>
+                <Grid container spacing={5} direction="column">
+                  <Grid
+                    container
+                    item
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <img
+                      src={html}
+                      alt="html"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(0);
+                      }}
+                    />
+                    <img
+                      src={css}
+                      alt="css"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(1);
+                      }}
+                    />
+                    <img
+                      src={js}
+                      alt="js"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(2);
+                      }}
+                    />
+                    <img
+                      src={ts}
+                      alt="ts"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(3);
+                      }}
+                    />
+                  </Grid>
+                  <Grid
+                    container
+                    item
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <img
+                      src={kotlin}
+                      alt="kotlin"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(4);
+                      }}
+                    />
+                    <img
+                      src={node}
+                      alt="node"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(5);
+                      }}
+                    />
+                    <img
+                      src={micronaut}
+                      alt="micronaut"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(6);
+                      }}
+                    />
+                    <img
+                      src={postgres}
+                      alt="postgres"
+                      className={classes.images}
+                      onClick={() => {
+                        setSkillsState(7);
+                      }}
                     />
                   </Grid>
                 </Grid>
-              </Box>
+              </Grid>
+              <Grid item lg={5}>
+                <Box display={{ xs: "none", lg: "inline" }}>
+                  <Grid
+                    container
+                    alignItems="center"
+                    justifyContent="center"
+                    direction="column"
+                    className={classes.skillsDescription}
+                  >
+                    <Grid item lg={12}>
+                      <SkillsDescription
+                        title={skillsData[skillsState].title}
+                        description={skillsData[skillsState].description}
+                      />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              item
+              lg={12}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Button variant="outlined" color="primary">
+                My Technical Skills
+              </Button>
             </Grid>
           </Grid>
-          <Grid
-            container
-            item
-            lg={12}
-            alignItems="center"
-            justifyContent="center"
-          >
-            <Button variant="outlined" color="primary">
-              My Technical Skills
-            </Button>
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </div>
     </>
   );
 };
