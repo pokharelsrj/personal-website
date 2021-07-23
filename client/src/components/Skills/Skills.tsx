@@ -15,7 +15,7 @@ import { SkillsInterface } from "../SkillsDescription/types";
 
 const skillsData: Array<SkillsInterface> = [
   {
-    title: "Html",
+    title: "HTML",
     description:
       "HTML is the standard markup language for documents designed to be displayed in a web browser.",
   },
@@ -25,12 +25,12 @@ const skillsData: Array<SkillsInterface> = [
       "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.",
   },
   {
-    title: "JS",
+    title: "JavaScript",
     description:
       "JS is a programming language that conforms to the ECMAScript specification.",
   },
   {
-    title: "TS",
+    title: "TypeScript",
     description:
       "TS is a strict syntactical superset of JavaScript and adds optional static typing to the language.",
   },
