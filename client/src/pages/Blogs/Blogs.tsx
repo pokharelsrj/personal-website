@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
-import { CssBaseline, Button } from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
 import BlogsBody from "../../components/BlogsBody";
-import { Link } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
 
 export const Blogs: React.FC = () => {
