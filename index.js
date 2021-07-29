@@ -16,6 +16,7 @@ app.use(cors());
 
 //Routers
 app.use("/api/test", require("./routes/api/test"));
+app.use("/api/login/google", require("./routes/api/login"));
 
 //Mongoose Connection
 mongoose.connect(
