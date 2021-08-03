@@ -13,6 +13,7 @@ app.use(cors());
 
 app.use("/api/dummy", require("./routes/api/dummy"));
 app.use("/api/login/google", require("./routes/api/login"));
+app.use("/api/blog", require("./routes/api/blog"));
 
 mongoose.connect(
   process.env.DB_CONNECTION,
