@@ -37,6 +37,7 @@ export const BlogCard: React.FC<BlogInterface> = ({ fileName, date }) => {
   }, [fileName]);
 
   const classes = useStyles();
+  console.log(content);
 
   const openFullBlog = () => {
     history.push(`${url}/ab`);
