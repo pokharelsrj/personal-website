@@ -74,26 +74,6 @@ export const Header: React.FC = () => {
                   >
                     <Button className={classes.link}>About</Button>
                   </NavLink>
-
-                  <NavLink
-                    to={{ pathname: "/blogs" }}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button className={classes.link}>Technologies</Button>
-                  </NavLink>
-
-                  <NavLink
-                    to={{ pathname: "/blogs" }}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button className={classes.link}>Hobbies</Button>
-                  </NavLink>
-                  <NavLink
-                    to={{ pathname: "/blogs" }}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button className={classes.link}>Blogs</Button>
-                  </NavLink>
                 </Box>
               </>
             )}
